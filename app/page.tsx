@@ -6,16 +6,18 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-const names = ["محتشم", "Моһташам", "莫塔沙姆", "モタシャム", "Мохташам", "Mohtasham"];
+const names = [
+  "محتشم",
+  "Моһташам",
+  "莫塔沙姆",
+  "モタシャム",
+  "Мохташам",
+  "Mohtasham",
+];
 
 const Page = () => {
   const [currentName, setCurrentName] = useState(names[0]);
@@ -33,27 +35,31 @@ const Page = () => {
       }
     };
 
-    const interval = setInterval(() => {
-      changeName();
-    }, hovered ? 300 : 1000); // Faster on hover
+    const interval = setInterval(
+      () => {
+        changeName();
+      },
+      hovered ? 300 : 1000
+    ); // Faster on hover
 
     return () => clearInterval(interval);
   }, [hovered]);
 
   return (
-    <div className="flex flex-col lg:flex-row gap-10 mt-2 px-4 lg:px-0">
+    <div className="flex flex-col lg:flex-row gap-10 mt-16 px-4 lg:px-0 ">
       {/* Introduction Section */}
       <div className="w-full lg:w-1/2 text-justify tracking-tighter flex flex-col">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-4">
           Hi, I&apos;m{" "}
           <span
-            className={`transition-transform duration-300 ${hovered ? 'scale-105' : 'scale-100'} inline-block`}
+            className={`transition-transform duration-300 ${
+              hovered ? "scale-105" : "scale-100"
+            } inline-block`}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
           >
             {currentName}
           </span>
-          ,
         </h1>
         <p className="text-sm md:text-base">
           a dedicated Computer Science enthusiast with a passion for
@@ -77,12 +83,12 @@ const Page = () => {
         </p>
         <div className="flex flex-row gap-6 justify-center items-center mt-5">
           <Link href="/contact">
-            <Button className="bg-gray-800/50 hover:bg-white hover:text-black font-semibold transition-colors">
+            <Button className="bg-gray-800/50 text-white hover:bg-white hover:text-black  ">
               Contact Me
             </Button>
           </Link>
           <a href="/assets/Profile.pdf" download>
-            <Button className="bg-gray-800/50 hover:bg-white hover:text-black font-semibold">
+            <Button className="bg-gray-800/50 text-white hover:bg-white hover:text-black ">
               Resume
             </Button>
           </a>
@@ -95,10 +101,10 @@ const Page = () => {
           <h1 className="text-xl md:text-2xl font-semibold mb-4">FAQ</h1>
           <Accordion type="single" collapsible>
             <AccordionItem value="item-1">
-              <AccordionTrigger>Where do I want to work?</AccordionTrigger>
+              <AccordionTrigger>Where do I reside</AccordionTrigger>
               <AccordionContent>
-                I aim to work in a dynamic tech company on challenging projects
-                that drive innovation.
+                I am from Kashmir but im living in Kuala Lampur for sometime
+                now.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
@@ -129,7 +135,9 @@ const Page = () => {
                 <div className="absolute left-0 top-0 h-full w-1 bg-gray-500"></div>
                 <div className="absolute left-[-5px] top-0 h-2 w-2 rounded-full bg-gray-500"></div>
                 <div>
-                  <strong>Bachelors in Computer Science (Ongoing)</strong>
+                  <strong className="text-white">
+                    Bachelors in Computer Science (Ongoing)
+                  </strong>
                   <p>Taylors University, Sunway City, Malaysia</p>
                 </div>
               </div>
@@ -137,7 +145,9 @@ const Page = () => {
                 <div className="absolute left-0 top-0 h-full w-1 bg-gray-500"></div>
                 <div className="absolute left-[-5px] top-0 h-2 w-2 rounded-full bg-gray-500"></div>
                 <div>
-                  <strong>Tyndale Biscoe and Mallinson School (2021)</strong>
+                  <strong className="text-white">
+                    Tyndale Biscoe and Mallinson School (2021)
+                  </strong>
                   <p>Srinagar, Kashmir (High School)</p>
                 </div>
               </div>
@@ -145,7 +155,9 @@ const Page = () => {
                 <div className="absolute left-0 top-0 h-full w-1 bg-gray-500"></div>
                 <div className="absolute left-[-5px] top-0 h-2 w-2 rounded-full bg-gray-500"></div>
                 <div>
-                  <strong>Kashmir Valley School (2019)</strong>
+                  <strong className="text-white">
+                    Kashmir Valley School (2019)
+                  </strong>
                   <p>Srinagar, Kashmir (10th grade)</p>
                 </div>
               </div>
