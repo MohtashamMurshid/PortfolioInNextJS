@@ -45,7 +45,7 @@ const Page = () => {
       {/* Introduction Section */}
       <div className="w-full lg:w-1/2 text-justify tracking-tighter flex flex-col">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-4">
-          Hi, I'm{" "}
+          Hi, I&apos;m{" "}
           <span
             className={`transition-transform duration-300 ${hovered ? 'scale-105' : 'scale-100'} inline-block`}
             onMouseEnter={() => setHovered(true)}
@@ -76,19 +76,16 @@ const Page = () => {
           drive innovation. Let’s build something amazing together!
         </p>
         <div className="flex flex-row gap-6 justify-center items-center mt-5">
-        <Link href="/contact">
-          <Button className="bg-gray-800/50 hover:bg-white hover:text-black font-semibold transition-colors">
-            Contact Me
-          </Button>
-        </Link>
-        <a href="/assets/Profile.pdf" download>
-          <Button className="bg-gray-800/50 hover:bg-white hover:text-black font-semibold">
-            Resume
-          </Button>
-        </a>
-
-
-
+          <Link href="/contact">
+            <Button className="bg-gray-800/50 hover:bg-white hover:text-black font-semibold transition-colors">
+              Contact Me
+            </Button>
+          </Link>
+          <a href="/assets/Profile.pdf" download>
+            <Button className="bg-gray-800/50 hover:bg-white hover:text-black font-semibold">
+              Resume
+            </Button>
+          </a>
         </div>
       </div>
 
