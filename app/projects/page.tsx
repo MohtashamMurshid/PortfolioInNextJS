@@ -8,7 +8,7 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { FaReact, FaNodeJs } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaArrowRight } from "react-icons/fa"; // Import arrow icon
 import {
   SiTypescript,
   SiSocketdotio,
@@ -16,7 +16,6 @@ import {
   SiMysql,
   SiNextdotjs,
 } from "react-icons/si";
-import { FaArrowRight } from "react-icons/fa"; // Import arrow icon
 import { Button } from "@/components/ui/button";
 
 // Define project types and data
@@ -36,7 +35,7 @@ const projects: Project[] = [
     image:
       "https://i.pinimg.com/564x/a5/60/4d/a5604d3390f5bacdd747e21591d4aa41.jpg",
     description:
-      "This JavaFX project is a Question & Answer (Q&A) application with user and admin roles. It includes encryption for user/admin authentication and supports different types of questions.",
+      "This JavaFX project is a Question &amp; Answer (Q&amp;A) application with user and admin roles. It includes encryption for user/admin authentication and supports different types of questions.",
     dateCreated: "Jul 7, 2024",
     techUsed: ["Java", "JavaFx"],
   },
@@ -66,9 +65,9 @@ const projects: Project[] = [
     image:
       "https://i.pinimg.com/564x/97/6d/12/976d127c800fa8ccff41ea330a0dea36.jpg",
     description:
-      "This bone fracture classification project utilizes three models to analyze medical images, accurately identifying fractures through advanced machine learning techniques for enhanced diagnostic support",
+      "This bone fracture classification project utilizes three models to analyze medical images, accurately identifying fractures through advanced machine learning techniques for enhanced diagnostic support.",
     dateCreated: "Sep 17, 2024",
-    techUsed: ["Java", "Swing"],
+    techUsed: ["Python", "Machine Learning"],
   },
   {
     id: 5,
@@ -76,7 +75,7 @@ const projects: Project[] = [
     image:
       "https://i.pinimg.com/564x/5a/24/69/5a246963c2e166d1473636c3d3f29160.jpg",
     description:
-      "This project is a simple ATM machine simulation built using Java. It allows users to log in with their account credentials, perform transactions such as deposits and withdrawals,and check balance etc. ",
+      "This project is a simple ATM machine simulation built using Java. It allows users to log in with their account credentials, perform transactions such as deposits and withdrawals, and check balance, etc.",
     dateCreated: "Sep 17, 2024",
     techUsed: ["Java", "Swing"],
   },
@@ -88,7 +87,7 @@ const projects: Project[] = [
     description:
       "This project predicts song popularity using machine learning models by analyzing features like tempo, energy, and danceability, helping forecast chart success and audience engagement.",
     dateCreated: "Sep 17, 2024",
-    techUsed: ["Java", "Swing"],
+    techUsed: ["Python", "Machine Learning"],
   },
 ];
 
@@ -150,7 +149,7 @@ const ProjectsPage: React.FC = () => {
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
         {projects.map((project) => (
-          <Card key={project.id} className="border-none bg-transparent px-4 ">
+          <Card key={project.id} className="border-none bg-transparent px-4">
             <CardHeader>
               <img
                 src={project.image}
@@ -190,14 +189,13 @@ const ProjectsPage: React.FC = () => {
                 </Button>
               </Link>
 
-              <Link href={`https://github.com/MohtashamMurshid/${project.title
-                  
-                  .replace(/\s+/g, "")}`}passHref>
+              <Link
+                href={`https://github.com/MohtashamMurshid/${project.title.replace(/\s+/g, "")}`}
+                passHref
+              >
                 <Button
                   as="a"
-                  href={`https://github.com/MohtashamMurshid/${project.title
-                  
-                    .replace(/\s+/g, "")}`}
+                  href={`https://github.com/MohtashamMurshid/${project.title.replace(/\s+/g, "")}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center text-white mt-2 hover:bg-white hover:text-black"

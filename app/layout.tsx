@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <title>Mohtasham's Portfolio</title>
+        <title>Mohtasham`&apos;`s Portfolio</title>
         <meta name="description" content="My Minimalistic Portfolio" />
         {/* Add the favicon link */}
         <link rel="icon" href="./favicon.svg" />

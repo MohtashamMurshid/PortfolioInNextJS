@@ -19,29 +19,43 @@ export default function Navbar() {
             <AvatarImage src="https://mohtasham.pages.dev/assets/profile-pic.png" />
             <AvatarFallback>MM</AvatarFallback>
           </Avatar>
-          <h1 className='jacquarda-bastarda-9-regular'>Mohtasham</h1>
+          <h1 className="jacquarda-bastarda-9-regular">Mohtasham</h1>
         </div>
 
         {/* Hamburger Menu for Small Devices */}
         <div className="lg:hidden">
           <Button onClick={toggleMenu} className="text-white bg-transparent">
-            ☰
+            &#x2630; {/* HTML entity for the hamburger menu icon */}
           </Button>
         </div>
 
         {/* Links Container */}
-        <div className={`lg:flex ${isMenuOpen ? 'flex flex-col absolute top-16 right-0 w-64 bg-[#0a0a0a] z-50 transition-transform transform translate-x-0' : 'hidden'}`}>
+        <div
+          className={`lg:flex ${
+            isMenuOpen
+              ? 'flex flex-col absolute top-16 right-0 w-64 bg-[#0a0a0a] z-50 transition-transform transform translate-x-0'
+              : 'hidden'
+          }`}
+        >
           <Link href="/" passHref>
-            <Button className="text-white bg-transparent" onClick={() => setIsMenuOpen(false)}>About</Button>
+            <Button className="text-white bg-transparent" onClick={() => setIsMenuOpen(false)}>
+              About
+            </Button>
           </Link>
           <Link href="/projects" passHref>
-            <Button className="text-white bg-transparent" onClick={() => setIsMenuOpen(false)}>Projects</Button>
+            <Button className="text-white bg-transparent" onClick={() => setIsMenuOpen(false)}>
+              Projects
+            </Button>
           </Link>
           <Link href="/contact" passHref>
-            <Button className="text-white bg-transparent" onClick={() => setIsMenuOpen(false)}>Contact</Button>
+            <Button className="text-white bg-transparent" onClick={() => setIsMenuOpen(false)}>
+              Contact
+            </Button>
           </Link>
           <Link href="/blog" passHref>
-            <Button className="text-white bg-transparent" onClick={() => setIsMenuOpen(false)}>Blog</Button>
+            <Button className="text-white bg-transparent" onClick={() => setIsMenuOpen(false)}>
+              Blog
+            </Button>
           </Link>
         </div>
       </nav>
