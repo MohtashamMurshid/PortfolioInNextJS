@@ -9,6 +9,7 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { FaArrowRight } from "react-icons/fa";
 
 const names = [
   "محتشم",
@@ -46,7 +47,7 @@ const Page = () => {
   }, [hovered]);
 
   return (
-    <div className="flex flex-col lg:flex-row gap-10 mt-16 px-4 lg:px-0 ">
+    <div className="flex flex-col lg:flex-row gap-10 mt-5 px-4 lg:px-0 ">
       {/* Introduction Section */}
       <div className="w-full lg:w-1/2 text-justify tracking-tighter flex flex-col">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-4">
@@ -83,49 +84,22 @@ const Page = () => {
         </p>
         <div className="flex flex-row gap-6 justify-center items-center mt-5">
           <Link href="/contact">
-            <Button className="bg-gray-800/50 text-white hover:bg-white hover:text-black  ">
-              Contact Me
+            <Button className="bg-transparent text-white hover:bg-white hover:text-black   ">
+              Contact Me <FaArrowRight className="ml-1" />
             </Button>
           </Link>
           <a href="/assets/Profile.pdf" download>
-            <Button className="bg-gray-800/50 text-white hover:bg-white hover:text-black ">
-              Resume
+            <Button className="bg-transparent text-white hover:bg-white hover:text-black ">
+              Resume <FaArrowRight className="ml-1" />
             </Button>
           </a>
         </div>
       </div>
 
       {/* Accordion and Education Section */}
-      <div className="w-full lg:w-1/2 flex flex-col gap-4 mt-8 lg:mt-0">
-        <div className="rounded-xl p-6 md:p-9 flex-1 bg-gray-800/30">
-          <h1 className="text-xl md:text-2xl font-semibold mb-4">FAQ</h1>
-          <Accordion type="single" collapsible>
-            <AccordionItem value="item-1">
-              <AccordionTrigger>Where do I reside</AccordionTrigger>
-              <AccordionContent>
-                I am from Kashmir but im living in Kuala Lampur for sometime
-                now.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-2">
-              <AccordionTrigger>Do I take freelance jobs?</AccordionTrigger>
-              <AccordionContent>
-                Yes, I occasionally take freelance projects to explore diverse
-                technologies.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-3">
-              <AccordionTrigger>How do I tackle problems?</AccordionTrigger>
-              <AccordionContent>
-                I break down problems, research solutions, and seek
-                collaboration when needed.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        </div>
-
+      <div className="w-full lg:w-1/2 flex flex-col  mt-8 lg:mt-0">
         {/* Education Card with Timeline */}
-        <Card className="text-white border-none bg-gray-800/30">
+        <Card className="text-white border-none bg-transparent">
           <CardHeader>
             <CardTitle>Education</CardTitle>
           </CardHeader>
@@ -161,6 +135,32 @@ const Page = () => {
                   <p>Srinagar, Kashmir (10th grade)</p>
                 </div>
               </div>
+            </div>
+            <div className="rounded-xl p-6 md:p-9 flex-1 bg-transparent text-white text-sm">
+              <h1 className="text-xl md:text-2xl font-semibold mb-2">FAQ</h1>
+              <Accordion type="single" collapsible>
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>Where do I reside</AccordionTrigger>
+                  <AccordionContent>
+                    I am from Kashmir but im living in Kuala Lampur for sometime
+                    now.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-2">
+                  <AccordionTrigger>Do I take freelance jobs?</AccordionTrigger>
+                  <AccordionContent>
+                    Yes, I occasionally take freelance projects to explore
+                    diverse technologies.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-3">
+                  <AccordionTrigger>How do I tackle problems?</AccordionTrigger>
+                  <AccordionContent>
+                    I break down problems, research solutions, and seek
+                    collaboration when needed.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </div>
           </CardContent>
         </Card>

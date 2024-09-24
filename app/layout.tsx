@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import Head from "next/head"; // Import the Head component from Next.js
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar"; // Adjust the import path as necessary
-import { ThemeProvider } from "@/components/theme-provider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,6 +27,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <title>Mohtasham's Portfolio</title>
+        <meta name="description" content="My Minimalistic Portfolio" />
+        {/* Add the favicon link */}
+        <link rel="icon" href="./favicon.svg" />
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

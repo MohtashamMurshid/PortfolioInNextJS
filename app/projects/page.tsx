@@ -32,30 +32,63 @@ export type Project = {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Portfolio Website",
-    image: "",
+    title: "Question Answer form",
+    image:
+      "https://i.pinimg.com/564x/a5/60/4d/a5604d3390f5bacdd747e21591d4aa41.jpg",
     description:
-      "A personal portfolio website built with Next.js and TailwindCSS.",
-    dateCreated: "2023-05-01",
-    techUsed: ["Next.js", "TypeScript"],
+      "This JavaFX project is a Question & Answer (Q&A) application with user and admin roles. It includes encryption for user/admin authentication and supports different types of questions.",
+    dateCreated: "Jul 7, 2024",
+    techUsed: ["Java", "JavaFx"],
   },
   {
     id: 2,
-    title: "E-commerce Platform",
-    image: "/images/ecommerce.png",
+    title: "MarketPlace",
+    image:
+      "https://i.pinimg.com/564x/ea/8b/a5/ea8ba5de10b72d1b21c6d5ab1ab1808f.jpg",
     description:
-      "An e-commerce platform with a custom shopping cart and payment integration.",
-    dateCreated: "2022-11-15",
-    techUsed: ["React", "Node.js"],
+      "A Flask-based marketplace application featuring item listings, purchase and sale functionalities, and user authentication. Designed with a modern., shopping cart, and secure checkout.",
+    dateCreated: "Sep 13, 2024",
+    techUsed: ["Flask", "HTML", "Bootstrap"],
   },
   {
     id: 3,
-    title: "Chat Application",
-    image: "/images/chatapp.png",
+    title: "Flappy Bird",
+    image:
+      "https://i.pinimg.com/564x/1c/25/17/1c25175efa1882ce2b5071e6e9b1819e.jpg",
     description:
-      "A real-time chat application with WebSocket and chat room features.",
-    dateCreated: "2023-03-20",
-    techUsed: ["React", "Socket.io", "Java"],
+      "This project is a recreation of the original Flappy Bird game, developed using Java and Swing. It features realistic gravity effects, precise collision detection, and smooth gameplay mechanics, providing a challenging and nostalgic experience reminiscent of the original game.",
+    dateCreated: "Sep 17, 2024",
+    techUsed: ["Java", "Swing"],
+  },
+  {
+    id: 4,
+    title: "Bone Fracture Classification",
+    image:
+      "https://i.pinimg.com/564x/97/6d/12/976d127c800fa8ccff41ea330a0dea36.jpg",
+    description:
+      "This bone fracture classification project utilizes three models to analyze medical images, accurately identifying fractures through advanced machine learning techniques for enhanced diagnostic support",
+    dateCreated: "Sep 17, 2024",
+    techUsed: ["Java", "Swing"],
+  },
+  {
+    id: 5,
+    title: "Atm Machine",
+    image:
+      "https://i.pinimg.com/564x/5a/24/69/5a246963c2e166d1473636c3d3f29160.jpg",
+    description:
+      "This project is a simple ATM machine simulation built using Java. It allows users to log in with their account credentials, perform transactions such as deposits and withdrawals,and check balance etc. ",
+    dateCreated: "Sep 17, 2024",
+    techUsed: ["Java", "Swing"],
+  },
+  {
+    id: 6,
+    title: "PredictionOfSongPopularity",
+    image:
+      "https://i.pinimg.com/564x/3d/66/c9/3d66c9e73495c6ea40a224d00bf353e8.jpg",
+    description:
+      "This project predicts song popularity using machine learning models by analyzing features like tempo, energy, and danceability, helping forecast chart success and audience engagement.",
+    dateCreated: "Sep 17, 2024",
+    techUsed: ["Java", "Swing"],
   },
 ];
 
@@ -107,7 +140,7 @@ const ProjectsPage: React.FC = () => {
   }, [hovered]);
 
   return (
-    <div className="bg-[--background] p-6 mt-16 flex flex-col items-center gap-4">
+    <div className="bg-[--background] p-6 flex flex-col items-center gap-4">
       <h1
         className="text-white text-3xl font-semibold mb-6"
         onMouseEnter={() => setHovered(true)}
@@ -115,12 +148,9 @@ const ProjectsPage: React.FC = () => {
       >
         {currentName}
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
         {projects.map((project) => (
-          <Card
-            key={project.id}
-            className="border-none bg-transparent transition-transform transform hover:scale-105"
-          >
+          <Card key={project.id} className="border-none bg-transparent px-4 ">
             <CardHeader>
               <img
                 src={project.image}
@@ -135,7 +165,7 @@ const ProjectsPage: React.FC = () => {
             </CardHeader>
             <CardContent>
               <p className="text-gray-300">{project.description}</p>
-              <p className="text-gray-400 mt-2">{project.dateCreated}</p>
+              <p className="text-gray-400">{project.dateCreated}</p>
             </CardContent>
             <CardFooter className="flex flex-col items-start space-y-2">
               <div className="flex space-x-2 flex-wrap">
@@ -155,8 +185,24 @@ const ProjectsPage: React.FC = () => {
                   .replace(/\s+/g, "-")}`}
                 passHref
               >
-                <Button className="flex items-center text-white mt-2">
+                <Button className="flex items-center text-white mt-2 hover:bg-white hover:text-black">
                   View Project <FaArrowRight className="ml-1" />
+                </Button>
+              </Link>
+
+              <Link href={`https://github.com/MohtashamMurshid/${project.title
+                  
+                  .replace(/\s+/g, "")}`}passHref>
+                <Button
+                  as="a"
+                  href={`https://github.com/MohtashamMurshid/${project.title
+                  
+                    .replace(/\s+/g, "")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-white mt-2 hover:bg-white hover:text-black"
+                >
+                  Github <FaArrowRight className="ml-1" />
                 </Button>
               </Link>
             </CardFooter>
