@@ -178,31 +178,19 @@ const ProjectsPage: React.FC = () => {
                   </Badge>
                 ))}
               </div>
-              <Link
-                href={`/projects/${project.title
-                  .toLowerCase()
-                  .replace(/\s+/g, "-")}`}
-                passHref
-              >
-                <Button className="flex items-center text-white mt-2 hover:bg-white hover:text-black">
-                  View Project <FaArrowRight className="ml-1" />
-                </Button>
-              </Link>
+          
 
-              <Link
-                href={`https://github.com/MohtashamMurshid/${project.title.replace(/\s+/g, "")}`}
-                passHref
+              <a
+                href={`https://github.com/MohtashamMurshid/${project.title.replace(
+                  /\s+/g,
+                  ""
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center text-white mt-2 hover:bg-white hover:text-black p-2 rounded transition-colors"
               >
-                <Button
-                  as="a"
-                  href={`https://github.com/MohtashamMurshid/${project.title.replace(/\s+/g, "")}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center text-white mt-2 hover:bg-white hover:text-black"
-                >
-                  Github <FaArrowRight className="ml-1" />
-                </Button>
-              </Link>
+                Github <FaArrowRight className="ml-1" />
+              </a>
             </CardFooter>
           </Card>
         ))}
