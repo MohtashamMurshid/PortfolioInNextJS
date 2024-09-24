@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
 import {
   Card,
   CardHeader,
@@ -16,7 +15,6 @@ import {
   SiMysql,
   SiNextdotjs,
 } from "react-icons/si";
-import { Button } from "@/components/ui/button";
 
 // Define project types and data
 export type Project = {

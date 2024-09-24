@@ -16,7 +16,7 @@ export default function Navbar() {
       <nav className="flex justify-between items-center p-4 text-white bg-[#0a0a0a]">
         <div className="text-xl font-light tracking-wide font-sans flex flex-row gap-3 items-center">
           <Avatar>
-            <AvatarImage src="https://mohtasham.pages.dev/assets/profile-pic.png" />
+            <AvatarImage src="" />
             <AvatarFallback>MM</AvatarFallback>
           </Avatar>
           <h1 className="jacquarda-bastarda-9-regular">Mohtasham</h1>
