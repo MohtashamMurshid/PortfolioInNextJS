@@ -1,13 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import {
-  Card,
-  CardHeader,
-  CardContent,
-  CardFooter,
-} from "@/components/ui/card";
+import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { FaReact, FaNodeJs, FaArrowRight } from "react-icons/fa"; // Import arrow icon
+import { FaReact, FaNodeJs, FaArrowRight } from "react-icons/fa";
 import {
   SiTypescript,
   SiSocketdotio,
@@ -33,7 +28,7 @@ const projects: Project[] = [
     image:
       "https://i.pinimg.com/564x/a5/60/4d/a5604d3390f5bacdd747e21591d4aa41.jpg",
     description:
-      "This JavaFX project is a Question &amp; Answer (Q&amp;A) application with user and admin roles. It includes encryption for user/admin authentication and supports different types of questions.",
+      "This JavaFX project is a Question & Answer (Q&A) application with user and admin roles. It includes encryption for user/admin authentication and supports different types of questions.",
     dateCreated: "Jul 7, 2024",
     techUsed: ["Java", "JavaFx"],
   },
@@ -43,7 +38,7 @@ const projects: Project[] = [
     image:
       "https://i.pinimg.com/564x/ea/8b/a5/ea8ba5de10b72d1b21c6d5ab1ab1808f.jpg",
     description:
-      "A Flask-based marketplace application featuring item listings, purchase and sale functionalities, and user authentication. Designed with a modern., shopping cart, and secure checkout.",
+      "A Flask-based marketplace application featuring item listings, purchase and sale functionalities, and user authentication. Designed with a modern, shopping cart, and secure checkout.",
     dateCreated: "Sep 13, 2024",
     techUsed: ["Flask", "HTML", "Bootstrap"],
   },
@@ -69,7 +64,7 @@ const projects: Project[] = [
   },
   {
     id: 5,
-    title: "Atm Machine",
+    title: "ATM Machine",
     image:
       "https://i.pinimg.com/564x/5a/24/69/5a246963c2e166d1473636c3d3f29160.jpg",
     description:
@@ -79,7 +74,7 @@ const projects: Project[] = [
   },
   {
     id: 6,
-    title: "PredictionOfSongPopularity",
+    title: "Prediction Of Song Popularity",
     image:
       "https://i.pinimg.com/564x/3d/66/c9/3d66c9e73495c6ea40a224d00bf353e8.jpg",
     description:
@@ -88,6 +83,16 @@ const projects: Project[] = [
     techUsed: ["Python", "Machine Learning"],
   },
 ];
+// Tech icons mapping
+const techIcons: { [key: string]: React.ReactNode } = {
+  React: <FaReact />,
+  "Node.js": <FaNodeJs />,
+  TypeScript: <SiTypescript />,
+  "Socket.io": <SiSocketdotio />,
+  Python: <SiPython />,
+  MySQL: <SiMysql />,
+  "Next.js": <SiNextdotjs />,
+};
 
 // Names array for heading
 const names = [
@@ -99,16 +104,7 @@ const names = [
   "My Projects",
 ];
 
-// Tech icons mapping
-const techIcons: { [key: string]: React.ReactNode } = {
-  React: <FaReact />,
-  "Node.js": <FaNodeJs />,
-  TypeScript: <SiTypescript />,
-  "Socket.io": <SiSocketdotio />,
-  Python: <SiPython />,
-  MySQL: <SiMysql />,
-  "Next.js": <SiNextdotjs />,
-};
+
 
 const ProjectsPage: React.FC = () => {
   const [currentName, setCurrentName] = useState(names[0]);
@@ -137,7 +133,7 @@ const ProjectsPage: React.FC = () => {
   }, [hovered]);
 
   return (
-    <div className="bg-[--background] p-6 flex flex-col items-center gap-4">
+    <div className="bg-[--background]  flex flex-col items-center gap-4">
       <h1
         className="text-white text-3xl font-semibold mb-6"
         onMouseEnter={() => setHovered(true)}
@@ -145,9 +141,12 @@ const ProjectsPage: React.FC = () => {
       >
         {currentName}
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project) => (
-          <Card key={project.id} className="border-none bg-transparent px-4">
+          <Card
+            key={project.id}
+            className="border-none bg-transparent px-4 sm:max-w-sm"
+          >
             <CardHeader>
               <img
                 src={project.image}
@@ -176,8 +175,6 @@ const ProjectsPage: React.FC = () => {
                   </Badge>
                 ))}
               </div>
-          
-
               <a
                 href={`https://github.com/MohtashamMurshid/${project.title.replace(
                   /\s+/g,
