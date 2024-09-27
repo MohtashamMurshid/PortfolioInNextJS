@@ -1,6 +1,6 @@
 import DynamicHeading from '@/components/DynamicHeading'
 import { Card, CardHeader, CardContent } from '@/components/ui/card'
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaPython, FaJava, FaArrowRight } from 'react-icons/fa'
+import {  FaJs, FaReact, FaNodeJs, FaJava, FaArrowRight } from 'react-icons/fa'
 import { SiTensorflow, SiPytorch, SiScikitlearn, SiKotlin, SiAndroidstudio } from 'react-icons/si'
 import React from 'react'
 import { Button } from '@/components/ui/button'
