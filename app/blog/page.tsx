@@ -11,7 +11,7 @@ const names = [
   "My Blogs",
 ];
 
-const BlogsPage = () => {
+const page = () => {
   const articles = getCategorisedArticles(); // Ensure this is properly defined
 
   return (
@@ -35,4 +35,4 @@ const BlogsPage = () => {
   );
 };
 
-export default BlogsPage;
+export default page;

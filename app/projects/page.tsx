@@ -1,5 +1,3 @@
-"use client";
-import React, { useState, useEffect } from "react";
 import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { FaReact, FaNodeJs, FaArrowRight } from "react-icons/fa";
@@ -10,6 +8,7 @@ import {
   SiMysql,
   SiNextdotjs,
 } from "react-icons/si";
+import DynamicHeading from "@/components/DynamicHeading";
 
 // Define project types and data
 export type Project = {
@@ -106,41 +105,11 @@ const names = [
 
 
 
-const ProjectsPage: React.FC = () => {
-  const [currentName, setCurrentName] = useState(names[0]);
-  const [hovered, setHovered] = useState(false);
-
-  useEffect(() => {
-    let index = 0;
-    const changeName = () => {
-      setCurrentName(names[index]);
-      index = (index + 1) % names.length;
-
-      if (index === names.length - 1) {
-        clearInterval(interval);
-        setCurrentName(names[names.length - 1]);
-      }
-    };
-
-    const interval = setInterval(
-      () => {
-        changeName();
-      },
-      hovered ? 300 : 1000
-    );
-
-    return () => clearInterval(interval);
-  }, [hovered]);
-
+const ProjectsPage = () => {
+ 
   return (
     <div className="bg-[--background]  flex flex-col items-center gap-4">
-      <h1
-        className="text-white text-3xl font-semibold mb-6"
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-      >
-        {currentName}
-      </h1>
+      <DynamicHeading names={names} />
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project) => (
           <Card
