@@ -32,7 +32,7 @@ const DynamicHeading: React.FC<DynamicHeadingProps> = ({ names }) => {
 
   return (
     <h1
-      className="text-white text-3xl font-semibold mb-6"
+      className="text-white text-3xl font-semibold mb-6 "
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >

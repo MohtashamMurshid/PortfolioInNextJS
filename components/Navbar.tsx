@@ -42,6 +42,11 @@ export default function Navbar() {
               About
             </Button>
           </Link>
+          <Link href="/skills" passHref>
+            <Button className="text-white bg-transparent" onClick={() => setIsMenuOpen(false)}>
+              Skills
+            </Button>
+          </Link>
           <Link href="/projects" passHref>
             <Button className="text-white bg-transparent" onClick={() => setIsMenuOpen(false)}>
               Projects
@@ -52,11 +57,7 @@ export default function Navbar() {
               Contact
             </Button>
           </Link>
-          <Link href="/blog" passHref>
-            <Button className="text-white bg-transparent" onClick={() => setIsMenuOpen(false)}>
-              Blog
-            </Button>
-          </Link>
+          
         </div>
       </nav>
     </div>
