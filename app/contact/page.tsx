@@ -29,12 +29,12 @@ const Page = () => {
           <p className="text-justify">
             I am passionate about helping individuals and organizations tackle
             complex challenges through innovative, thoughtful solutions. Whether
-            you're seeking collaboration on a project, looking for expert advice
+            you&apos;re seeking collaboration on a project, looking for expert advice
             in software development, or exploring new opportunities, I am always
             eager to connect. With a diverse skill set in web development, AI,
             and machine learning, combined with a dedication to continuous
             learning, I aim to deliver value in everything I do. Feel free to
-            reach out if you're ready to collaborate, exchange ideas, or discuss
+            reach out if you&apos;re ready to collaborate, exchange ideas, or discuss
             how we can create meaningful impact together.
           </p>
           <div className="flex flex-row items-center justify-center gap-6 mt-8">
@@ -91,7 +91,6 @@ const Page = () => {
                   clickswithm
                 </a>
               </li>
-              {/* Add more socials as needed */}
             </ul>
           </div>
           {/* Work Contacts */}
