@@ -38,6 +38,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <footer className="text-center mt-4 text-white/10">Mohtasham@2024</footer>
       </body>
     </html>
   );

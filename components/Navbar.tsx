@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { TbCircleLetterMFilled } from "react-icons/tb";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,10 +16,7 @@ export default function Navbar() {
     <div className="relative z-50">
       <nav className="flex justify-between items-center p-4 text-white bg-[#0a0a0a]">
         <div className="text-xl font-light tracking-wide font-sans flex flex-row gap-3 items-center">
-          <Avatar>
-            <AvatarImage src="" />
-            <AvatarFallback>MM</AvatarFallback>
-          </Avatar>
+        <TbCircleLetterMFilled className="text-4xl"/>
           <h1 className="jacquarda-bastarda-9-regular">Mohtasham</h1>
         </div>
 
