@@ -4,6 +4,8 @@ import {
   FaRegEnvelope,
   FaArrowRight,
 } from "react-icons/fa";
+import { SiFiverr } from "react-icons/si";
+
 import { FaXTwitter } from "react-icons/fa6";
 import DynamicHeading from "@/components/DynamicHeading";
 import { Button } from "@/components/ui/button";
@@ -101,6 +103,12 @@ const Page = () => {
                 <FaRegEnvelope className="text-4xl mr-2 hover:text-[#D44638] hover:scale-110 transition-transform duration-300 " />
                 <a href="mailto:mohtashammurshid@gmail.com">
                   mohtashammurshid@gmail.com
+                </a>
+              </li>
+              <li className="flex items-center">
+                <SiFiverr className="text-5xl mr-2 hover:text-green-500 hover:scale-110 transition-transform duration-300 " />
+                <a href="https://www.fiverr.com/mohtashammadani">
+                  mohtashammadani
                 </a>
               </li>
             </ul>
