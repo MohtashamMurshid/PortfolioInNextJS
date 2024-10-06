@@ -40,7 +40,7 @@ const Page = () => {
             how we can create meaningful impact together.
           </p>
           <div className="flex flex-row items-center justify-center gap-6 mt-8">
-            <Button className="bg-transparent">
+            <Button className="bg-transparent  hover:bg-white hover:text-black transition-all">
               <a
                 href="https://twitter.com/MohtashamCodes"
                 target="_blank"

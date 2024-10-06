@@ -47,7 +47,7 @@ const page = () => {
             </ul>
           </CardContent>
           <div className="mt-4">
-            <Button className="bg-transparent mt-2 mx-2 w-full">
+            <Button className="bg-transparent mt-2 mx-2 w-full  hover:bg-white hover:text-black transition-all">
               View Web Projects <FaArrowRight className="ml-1" />
             </Button>
           </div>
@@ -81,7 +81,7 @@ const page = () => {
             </ul>
           </CardContent>
           <div className="mt-4">
-            <Button className="bg-transparent mt-2 mx-2 w-full">
+            <Button className="bg-transparent mt-2 mx-2 w-full  hover:bg-white hover:text-black transition-all">
               View AI Projects <FaArrowRight className="ml-1" />
             </Button>
           </div>
@@ -116,7 +116,7 @@ const page = () => {
             </ul>
           </CardContent>
           <div className="mt-4">
-            <Button className="bg-transparent mt-2 mx-2 w-full">
+            <Button className="bg-transparent mt-2 mx-2 w-full  hover:bg-white hover:text-black transition-all">
               View Java Projects <FaArrowRight className="ml-1" />
             </Button>
           </div>

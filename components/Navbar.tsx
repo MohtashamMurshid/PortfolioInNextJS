@@ -21,36 +21,36 @@ export default function Navbar() {
 
         {/* Hamburger Menu for Small Devices */}
         <div className="lg:hidden">
-          <Button onClick={toggleMenu} className="text-white bg-transparent">
+          <Button onClick={toggleMenu} className="text-white bg-transparent hover:bg-white hover:text-black transition-all">
             &#x2630; {/* HTML entity for the hamburger menu icon */}
           </Button>
         </div>
 
         {/* Links Container */}
         <div
-          className={`lg:flex ${
+          className={`lg:flex gap-2 ${
             isMenuOpen
               ? 'flex flex-col absolute top-16 right-0 w-64 bg-[#0a0a0a] z-50 transition-transform transform translate-x-0'
               : 'hidden'
           }`}
         >
           <Link href="/" passHref>
-            <Button className="text-white bg-transparent" onClick={() => setIsMenuOpen(false)}>
+            <Button className="text-white bg-transparent hover:bg-white hover:text-black transition-all " onClick={() => setIsMenuOpen(false)}>
               About
             </Button>
           </Link>
           <Link href="/skills" passHref>
-            <Button className="text-white bg-transparent" onClick={() => setIsMenuOpen(false)}>
+            <Button className="text-white bg-transparent hover:bg-white hover:text-black transition-all" onClick={() => setIsMenuOpen(false)}>
               Skills
             </Button>
           </Link>
           <Link href="/projects" passHref>
-            <Button className="text-white bg-transparent" onClick={() => setIsMenuOpen(false)}>
+            <Button className="text-white bg-transparent hover:bg-white hover:text-black transition-all" onClick={() => setIsMenuOpen(false)}>
               Projects
             </Button>
           </Link>
           <Link href="/contact" passHref>
-            <Button className="text-white bg-transparent" onClick={() => setIsMenuOpen(false)}>
+            <Button className="text-white bg-transparent hover:bg-white hover:text-black transition-all" onClick={() => setIsMenuOpen(false)}>
               Contact
             </Button>
           </Link>

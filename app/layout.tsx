@@ -1,19 +1,12 @@
 import type { Metadata } from "next";
-import Head from "next/head"; // Import the Head component from Next.js
-import localFont from "next/font/local";
+import Head from "next/head"; 
 import "./globals.css";
-import Navbar from "@/components/Navbar"; // Adjust the import path as necessary
+import Navbar from "@/components/Navbar"; 
+import { GeistSans } from 'geist/font/sans';
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+
+
+
 
 export const metadata: Metadata = {
   title: "Mohtasham's Portfolio",
@@ -34,11 +27,11 @@ export default function RootLayout({
         <link rel="icon" href="./favicon.svg" />
       </Head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={GeistSans.className}
       >
         <Navbar />
         {children}
-        <footer className="text-center mt-4 text-white/10">Mohtasham@2024</footer>
+        <footer className="text-center mt-4 text-white/40 font-serif">Mohtasham@2024</footer>
       </body>
     </html>
   );
